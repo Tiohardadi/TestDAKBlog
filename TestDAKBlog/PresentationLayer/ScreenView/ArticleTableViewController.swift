@@ -10,44 +10,23 @@ import CoreData
 
 class ArticleTableViewController: UITableViewController, UISearchBarDelegate {
     var context: NSManagedObjectContext?
-//    var users: [UserModel] = []
-//    func getData(){
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-//
-//        let managedContext = appDelegate.persistentContainer.viewContext
-//
-//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserEntity")
-//
-//        do {
-//            let result = try managedContext.fetch(fetchRequest) as! [NSManagedObject]
-//            print(result.count)
-//            guard result.count != 0 else {return}
-//            users = []
-//            result.forEach { user in
-//                users.append(
-//                    UserModel(
-//                        firstName: user.value(forKey: "first_name") as! String,
-//                        lastName: user.value(forKey: "last_name") as! String,
-//                        aliasName: user.value(forKey: "alias_name") as! String,
-//                        dateOfBirth: user.value(forKey: "date_of_birth") as! String,
-//                        mobilePhone: user.value(forKey: "mobile_phone") as! String,
-//                        email: user.value(forKey: "email") as! String,
-//                        address: user.value(forKey: "address") as! String,
-//                        notes: user.value(forKey: "notes") as! String,
-//                        photo: user.value(forKey: "photo") as? Data ?? Data()
-//                    )
-//                )
-//            }
-//            print(users)
-//        } catch let err{
-//            print(err)
-//        }
-//
-//        tableView.reloadData()
-//    }
+    let userDefault = UserDefaults.standard
+    var article: [DataArticle] = []
+    func getData(){
+        NetworkServices().getArticle() { (result) in
+            switch result {
+            case .success(let success):
+                self.article = success.data!
+                self.tableView.reloadData()
+            case .failure(let error):
+                print("==>> get Fail :",error)
+            }
+        }
+        
+    }
     
     override func viewWillAppear(_ animated: Bool) {
-//        getData()
+        self.getData()
     }
    
     override func viewDidLoad() {
@@ -59,8 +38,8 @@ class ArticleTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     func setupNavigationItem() {
-        title = "Contact"
-        buttonAddView()a
+        title = "Artikel"
+        buttonAddView()
     }
     
     func buttonAddView() {
@@ -70,6 +49,32 @@ class ArticleTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     @objc func addAction() {
+        let alert = UIAlertController(title: "Tambah Artikel", message: "Buat Artikel Baru", preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.placeholder = "Judul"
+        }
+        alert.addTextField { (textField) in
+            textField.placeholder = "Deskripsi"
+        }
+
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let title = alert?.textFields![0].text ?? ""
+            let desc = alert?.textFields![1].text ?? ""
+            NetworkServices().addArticle(title: title, description: desc) { (result) in
+                switch result {
+                case .success(let success):
+                    self.getData()
+                case .failure(let error):
+                    self.getData()
+                    print("==>> add article Fail :",error)
+                }
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
+       
+        
+        
+        
 //        let vc = CreateViewController()
 //        let reloadData = {self.getData()}
 //        vc.reloadData = reloadData
@@ -82,15 +87,14 @@ class ArticleTableViewController: UITableViewController, UISearchBarDelegate {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return article.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "articleListCell", for: indexPath)
-//        let row: Int = indexPath.row
-//        let firstname = users[indexPath.row].firstName
-//        print(firstname)
-        cell.textLabel?.text = "firstname"
+        let row: Int = indexPath.row
+        let title = article[row].title
+        cell.textLabel?.text = title
         return cell
     }
     

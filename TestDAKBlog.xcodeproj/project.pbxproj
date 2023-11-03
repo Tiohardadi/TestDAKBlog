@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		01B0BB2C2AF4C3040041ECA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B0BB2B2AF4C3040041ECA2 /* AppDelegate.swift */; };
 		01B0BB2E2AF4C3040041ECA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B0BB2D2AF4C3040041ECA2 /* SceneDelegate.swift */; };
-		01B0BB302AF4C3040041ECA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B0BB2F2AF4C3040041ECA2 /* ViewController.swift */; };
-		01B0BB332AF4C3040041ECA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B0BB312AF4C3040041ECA2 /* Main.storyboard */; };
+		01B0BB302AF4C3040041ECA2 /* ArticleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B0BB2F2AF4C3040041ECA2 /* ArticleTableViewController.swift */; };
 		01B0BB352AF4C3050041ECA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B0BB342AF4C3050041ECA2 /* Assets.xcassets */; };
 		01B0BB382AF4C3050041ECA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B0BB362AF4C3050041ECA2 /* LaunchScreen.storyboard */; };
+		01B0BB482AF4C6240041ECA2 /* URLComponentsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B0BB472AF4C6240041ECA2 /* URLComponentsBuilder.swift */; };
+		01B0BB4A2AF4C63E0041ECA2 /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B0BB492AF4C63E0041ECA2 /* URLRequestBuilder.swift */; };
+		01B0BB4C2AF4C66E0041ECA2 /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B0BB4B2AF4C66E0041ECA2 /* NetworkServices.swift */; };
+		01B0BB4F2AF4CA200041ECA2 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B0BB4E2AF4CA200041ECA2 /* UserModel.swift */; };
+		01B0BB512AF4D0690041ECA2 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B0BB502AF4D0690041ECA2 /* ArticleModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		01B0BB282AF4C3040041ECA2 /* TestDAKBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDAKBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B0BB2B2AF4C3040041ECA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01B0BB2D2AF4C3040041ECA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		01B0BB2F2AF4C3040041ECA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		01B0BB322AF4C3040041ECA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01B0BB2F2AF4C3040041ECA2 /* ArticleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewController.swift; sourceTree = "<group>"; };
 		01B0BB342AF4C3050041ECA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01B0BB372AF4C3050041ECA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01B0BB392AF4C3050041ECA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01B0BB472AF4C6240041ECA2 /* URLComponentsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsBuilder.swift; sourceTree = "<group>"; };
+		01B0BB492AF4C63E0041ECA2 /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
+		01B0BB4B2AF4C66E0041ECA2 /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
+		01B0BB4E2AF4CA200041ECA2 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		01B0BB502AF4D0690041ECA2 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,91 @@
 		01B0BB2A2AF4C3040041ECA2 /* TestDAKBlog */ = {
 			isa = PBXGroup;
 			children = (
-				01B0BB2B2AF4C3040041ECA2 /* AppDelegate.swift */,
-				01B0BB2D2AF4C3040041ECA2 /* SceneDelegate.swift */,
-				01B0BB2F2AF4C3040041ECA2 /* ViewController.swift */,
-				01B0BB312AF4C3040041ECA2 /* Main.storyboard */,
-				01B0BB342AF4C3050041ECA2 /* Assets.xcassets */,
-				01B0BB362AF4C3050041ECA2 /* LaunchScreen.storyboard */,
-				01B0BB392AF4C3050041ECA2 /* Info.plist */,
+				01B0BB432AF4C5CA0041ECA2 /* DataLayer */,
+				01B0BB412AF4C5800041ECA2 /* PresentationLayer */,
+				01B0BB402AF4C5660041ECA2 /* Resource */,
+				01B0BB3F2AF4C5400041ECA2 /* App */,
 			);
 			path = TestDAKBlog;
+			sourceTree = "<group>";
+		};
+		01B0BB3F2AF4C5400041ECA2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				01B0BB2D2AF4C3040041ECA2 /* SceneDelegate.swift */,
+				01B0BB2B2AF4C3040041ECA2 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		01B0BB402AF4C5660041ECA2 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				01B0BB362AF4C3050041ECA2 /* LaunchScreen.storyboard */,
+				01B0BB342AF4C3050041ECA2 /* Assets.xcassets */,
+				01B0BB392AF4C3050041ECA2 /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		01B0BB412AF4C5800041ECA2 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				01B0BB422AF4C5B60041ECA2 /* ScreenView */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		01B0BB422AF4C5B60041ECA2 /* ScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				01B0BB2F2AF4C3040041ECA2 /* ArticleTableViewController.swift */,
+			);
+			path = ScreenView;
+			sourceTree = "<group>";
+		};
+		01B0BB432AF4C5CA0041ECA2 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				01B0BB4D2AF4CA0D0041ECA2 /* Entity */,
+				01B0BB442AF4C5DC0041ECA2 /* Api */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		01B0BB442AF4C5DC0041ECA2 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				01B0BB462AF4C5FC0041ECA2 /* Network */,
+				01B0BB452AF4C5EF0041ECA2 /* Services */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		01B0BB452AF4C5EF0041ECA2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				01B0BB4B2AF4C66E0041ECA2 /* NetworkServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		01B0BB462AF4C5FC0041ECA2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				01B0BB472AF4C6240041ECA2 /* URLComponentsBuilder.swift */,
+				01B0BB492AF4C63E0041ECA2 /* URLRequestBuilder.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		01B0BB4D2AF4CA0D0041ECA2 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				01B0BB4E2AF4CA200041ECA2 /* UserModel.swift */,
+				01B0BB502AF4D0690041ECA2 /* ArticleModel.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +211,6 @@
 			files = (
 				01B0BB382AF4C3050041ECA2 /* LaunchScreen.storyboard in Resources */,
 				01B0BB352AF4C3050041ECA2 /* Assets.xcassets in Resources */,
-				01B0BB332AF4C3040041ECA2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +221,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01B0BB302AF4C3040041ECA2 /* ViewController.swift in Sources */,
+				01B0BB4C2AF4C66E0041ECA2 /* NetworkServices.swift in Sources */,
+				01B0BB4F2AF4CA200041ECA2 /* UserModel.swift in Sources */,
+				01B0BB512AF4D0690041ECA2 /* ArticleModel.swift in Sources */,
+				01B0BB302AF4C3040041ECA2 /* ArticleTableViewController.swift in Sources */,
+				01B0BB4A2AF4C63E0041ECA2 /* URLRequestBuilder.swift in Sources */,
+				01B0BB482AF4C6240041ECA2 /* URLComponentsBuilder.swift in Sources */,
 				01B0BB2C2AF4C3040041ECA2 /* AppDelegate.swift in Sources */,
 				01B0BB2E2AF4C3040041ECA2 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +235,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		01B0BB312AF4C3040041ECA2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01B0BB322AF4C3040041ECA2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		01B0BB362AF4C3050041ECA2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -293,7 +373,6 @@
 				INFOPLIST_FILE = TestDAKBlog/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +399,6 @@
 				INFOPLIST_FILE = TestDAKBlog/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
